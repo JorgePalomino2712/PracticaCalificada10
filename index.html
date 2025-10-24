@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"  id="todo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./output.css">
+  <script src="./main.js" defer></script>
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body class="bg-white dark:bg-black min-h-screen transition-colors duration-300"">
+    <!-- Imagen de fondo -->
+    <div class="bg-[url(./images/bg-mobile-light.jpg)] md:bg-[url(./images/bg-desktop-light.jpg)]  bg-cover bg-center h-48 md:h-64 w-full absolute top-0 left-0"></div>
+    
+    <!-- Contenedor principal -->
+    <div class="relative max-w-xl mx-auto px-6 pt-12 md:pt-20">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-white text-3xl md:text-4xl font-bold tracking-[0.5em]">PRODUCTOS</h1>
+            <button id="themeToggle" class="text-white text-2xl hover:scale-110 transition-transform">
+                <img id="iconSun" src="./images/icon-sun.svg" alt="sol" class="hidden">
+                <img id="iconMoon" src="./images/icon-moon.svg" alt="Luna">
+            </button>
+        </div>
+
+        <!-- Input para nueva tarea -->
+        <div class="bg-white dark:bg-[#25273C] rounded-lg shadow-lg mb-6 p-4 flex items-center gap-4">
+            <div class="w-6 h-6 rounded-full border-2 border-[#D2D3DB] dark:border-[#4D5066] flex-shrink-0"></div>
+            <input 
+                type="text" 
+                id="filtro-input"
+                placeholder="Buscar por nombre o categoría..."
+                class="flex-1 bg-transparent text-[#484B6A] dark:text-[#CACDE8] outline-none text-sm md:text-base"
+                maxlength="200"
+            >
+        </div>
+        <button 
+                id="boton-recargar"
+                class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed mb-4"
+            >
+                Recargar Productos
+            </button>
+
+        <!-- Lista de tareas -->
+        <div class="bg-white dark:bg-[#25273C] rounded-lg shadow-2xl overflow-hidden">
+            <ul id="contenedor-productos" class="divide-y divide-[#D2D3DB] dark:divide-[#4D5066] gap-3">
+                <!-- Aqui se muestran los productos que busques -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
